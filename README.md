@@ -1,1 +1,51 @@
-# nmap-Local-Network-Scanner-Scripts
+### README.md
+
+## Scan Your Local Network for Open Ports using nmap
+
+This guide will show you how to use nmap to scan your local network for open ports. We will cover three common commands to help you identify active hosts, open ports, and service versions.
+
+### 1\. The commands
+
+  * *nmap -sS*: This performs a SYN stealth scan. It's fast and discreet because it doesn't complete the full TCP connection handshake. This scan is good for quickly checking which ports are open.
+
+  * *nmap -sV -p-*: This command is more thorough.
+
+      * -sV performs a service/version detection scan to determine what services are running on the open ports.
+      * -p- scans all 65535 ports, not just the most common ones. This can take a significant amount of time but provides a complete picture of all open ports.
+
+  * *nmap -sP*: This is a simple ping scan. It's used to determine which hosts on a network are online. It doesn't scan for open ports but is a good first step to identify live devices on your network.
+
+### 2\. Example Scan
+
+The image below shows the output of a port scan on a local network.
+
+http://googleusercontent.com/image_generation_content/0
+
+### 3\. Usage
+
+To run these commands, you need to have nmap installed on your system. You can install it on most Linux distributions using your package manager. For example, on Debian/Ubuntu, you would use:
+
+bash
+sudo apt-get update
+sudo apt-get install nmap
+
+
+On macOS, you can use Homebrew:
+
+bash
+brew install nmap
+
+
+On Windows, you can download the installer from the official nmap website.
+
+To run a scan, simply replace the IP address with the one you want to scan:
+
+bash
+nmap -sS <target_ip_address>
+nmap -sV -p- <target_ip_address>
+nmap -sP <target_ip_address>/24
+
+
+  * The <target_ip_address> can be a single IP address, a range (e.g., 192.168.1.100-200), or a subnet (e.g., 192.168.1.0/24).
+
+I have created the content for the README.md file you requested, complete with an image of a port scan and an explanation of the nmap commands.
