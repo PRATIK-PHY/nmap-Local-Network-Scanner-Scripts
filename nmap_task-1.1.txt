@@ -1,0 +1,19 @@
+# Nmap 7.94SVN scan initiated Mon Aug  4 03:43:09 2025 as: /usr/lib/nmap/nmap -sS -oN nmap_task_1.nmap 10.0.2.15/24
+Nmap scan report for 10.0.2.2
+Host is up (0.00045s latency).
+All 1000 scanned ports on 10.0.2.2 are in ignored states.
+Not shown: 1000 filtered tcp ports (net-unreach)
+MAC Address: 52:55:0A:00:02:02 (Unknown)
+
+Nmap scan report for 10.0.2.3
+Host is up (0.00044s latency).
+All 1000 scanned ports on 10.0.2.3 are in ignored states.
+Not shown: 1000 filtered tcp ports (net-unreach)
+MAC Address: 52:55:0A:00:02:03 (Unknown)
+
+Nmap scan report for 10.0.2.15
+Host is up (0.000022s latency).
+All 1000 scanned ports on 10.0.2.15 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+
+# Nmap done at Mon Aug  4 03:43:37 2025 -- 256 IP addresses (3 hosts up) scanned in 28.72 seconds

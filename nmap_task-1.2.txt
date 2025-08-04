@@ -1,0 +1,10 @@
+# Nmap 7.94SVN scan initiated Mon Aug  4 03:49:33 2025 as: /usr/lib/nmap/nmap -sP -oN nmap_task_12.nmap 10.0.2.15/24
+Nmap scan report for 10.0.2.2
+Host is up (0.00027s latency).
+MAC Address: 52:55:0A:00:02:02 (Unknown)
+Nmap scan report for 10.0.2.3
+Host is up (0.00058s latency).
+MAC Address: 52:55:0A:00:02:03 (Unknown)
+Nmap scan report for 10.0.2.15
+Host is up.
+# Nmap done at Mon Aug  4 03:50:01 2025 -- 256 IP addresses (3 hosts up) scanned in 28.75 seconds
