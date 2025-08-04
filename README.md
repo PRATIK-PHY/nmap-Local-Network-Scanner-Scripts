@@ -15,13 +15,7 @@ This guide will show you how to use nmap to scan your local network for open por
 
   * *nmap -sP*: This is a simple ping scan. It's used to determine which hosts on a network are online. It doesn't scan for open ports but is a good first step to identify live devices on your network.
 
-### 2\. Example Scan
-
-The image below shows the output of a port scan on a local network.
-
-http://googleusercontent.com/image_generation_content/0
-
-### 3\. Usage
+### 2\. Usage
 
 To run these commands, you need to have nmap installed on your system. You can install it on most Linux distributions using your package manager. For example, on Debian/Ubuntu, you would use:
 
@@ -47,5 +41,22 @@ nmap -sP <target_ip_address>/24
 
 
   * The <target_ip_address> can be a single IP address, a range (e.g., 192.168.1.100-200), or a subnet (e.g., 192.168.1.0/24).
-
+### 3\. Interpreting the Results
+The output of nmap will provide information about each scanned host.
+ * Host is up: The device is online and responded to the scan.
+ * PORT: The port number and the protocol (e.g., 80/tcp).
+ * STATE:
+   * open: An application is listening for connections on this port.
+   * closed: The port is accessible, but no application is listening.
+   * filtered: A firewall is blocking the port.
+ * SERVICE: The name of the service commonly associated with that port (e.g., http, ssh).
+Example output for a successful scan on a router:
+Nmap scan report for 192.168.1.1
+Host is up (0.0020s latency).
+Not shown: 998 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
 I have created the content for the README.md file you requested, complete with an image of a port scan and an explanation of the nmap commands.
+
+
