@@ -41,7 +41,9 @@ nmap -sP <target_ip_address>/24
 
 
   * The <target_ip_address> can be a single IP address, a range (e.g., 192.168.1.100-200), or a subnet (e.g., 192.168.1.0/24).
+
 ### 3\. Interpreting the Results
+
 The output of nmap will provide information about each scanned host.
  * Host is up: The device is online and responded to the scan.
  * PORT: The port number and the protocol (e.g., 80/tcp).
@@ -58,5 +60,19 @@ PORT     STATE SERVICE
 22/tcp   open  ssh
 80/tcp   open  http
 I have created the content for the README.md file you requested, complete with an image of a port scan and an explanation of the nmap commands.
+
+### 4\. High-Risk Ports and Associated Vulnerabilities
+
+| Port Number | Common Service | Key Security Risks/Vulnerabilities | Mitigation/Best Practice |
+|---|---|---|---|
+| 20/21 | FTP | Plaintext credentials, unauthorized file access. | Use SFTP (SSH FTP) or FTPS (FTP over TLS). |
+| 22 | SSH | Brute-forcing, leaked SSH keys, weak ciphers. | Enforce SSH-2, use key-based authentication, disable password logins, strong ciphers. |
+| 23 | Telnet | Unencrypted login, eavesdropping. | Replace with SSH. |
+| 25 | SMTP | Open relay for spam, spoofing, man-in-the-middle (if unencrypted). | Require TLS encryption and authentication. |
+| 53 | DNS | DNS spoofing, DDoS amplification attacks. | Use DNSSEC, restrict recursion. |
+| 80 | HTTP | No encryption, traffic interception, SQL injection, XSS, DDoS. | Use HTTPS with TLS 1.2+; enforce redirection. |
+| 110 | POP3 | Plaintext authentication, credential theft. | Use POP3S (SSL/TLS). |
+| 139/445 | SMB | Malware (WannaCry, EternalBlue for SMBv1), NTLM hash capture, brute-forcing. | Disable SMBv1, enforce SMBv3 with encryption. |
+| 3389 | RDP | Credential stuffing, ransomware delivery, BlueKeep vulnerability (older versions). | Enforce strong authentication (MFA), restrict access, keep patched. |
 
 
